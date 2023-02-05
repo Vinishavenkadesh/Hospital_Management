@@ -1,39 +1,43 @@
 import { useState } from "react";
+import NewPage from "./NewPage";
 
 function App() {
+  const [inputsOpen, setInputsOpen] = useState(false);
   return (
     <div className=" bg-[#152238] h-[100vh] w-[100vw]">
-      <div className="bg-white h-[60px] w-[100vw] border border-slate-300 ">
-        <button className="bg-[#152238] px-[15px] py-[8px] font-bold rounded-3xl mt-[9px] ml-[210px] text-white" onClick={}>+ Add Patient</button>
+      <div className="bg-[#F5F5F5] h-[60px] w-[100vw] border border-slate-300 ">
+        {inputsOpen ? <NewPage /> : <div></div>}
+        <button
+          className="bg-[#152238] px-8 py-3 text-sm font-medium rounded-3xl mt-[9px] ml-[210px] text-[#F5F5F5] transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-[#152238]"
+          onClick={() => setInputsOpen(true)}
+        >
+          + Add Patient
+        </button>
       </div>
       <div>
-        <div className="bg-white h-[450px] w-[200px] mt-3 border border-slate-300 "></div>
+        <div className="bg-[#F5F5F5] h-[520px] w-[200px] mt-3 border border-slate-300 "></div>
         <div>
-          <table className="w-[1150px] absolute top-[72px] left-[210px] text-left bg-white">
-            <thead>
-              <tr className="text-[#152238]">
-                <th className="border border-slate-300 p-[10px]">ID</th>
-                <th className="border border-slate-300 p-[10px]">Patient Name</th>
-                <th className="border border-slate-300 p-[10px]">Age</th>
-                <th className="border border-slate-300 p-[10px]">Disease</th>
-                <th className="border border-slate-300 p-[10px]">Temperature</th>
-                <th className="border border-slate-300 p-[10px]">Blood Pressure</th>
-                <th className="border border-slate-300 p-[10px]">Date</th>
-                <th className="border border-slate-300 p-[10px]">Treatment</th>
-                <th className="border border-slate-300 p-[10px]">Gender</th>
-              </tr>
-            </thead>
-          </table>
+          <div class="overflow-x-auto">
+            <table class="divide-y-2 divide-[#152238] text-[#152238] text-sm absolute w-[1147px] top-[72px] left-[210px] text-left bg-[#F5F5F5]">
+              <thead>
+                <tr>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">ID</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Patient Name</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Age</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Temperature</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Diseases</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Blood Pressure</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Date</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Treat</th>
+                  <th class="whitespace-nowrap px-4 py-2 text-left font-medium">Temperature</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   );
-}
-
-function newPage(){
-  return(
-    nbjhb
-  )
 }
 
 export default App;
