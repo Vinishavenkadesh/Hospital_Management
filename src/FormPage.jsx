@@ -1,17 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-function FormPage() {
+function FormPage({setInputsOpen}) {
+  const [submitForm, setSubmitForm] = useState(true);
   return (
     <div>
-      <div className=" p-[10px] absolute top-[150px] left-[370px] h-[440px] w-[750px] bg-[#E2E5DE] rounded-xl">
-        <div
-          className="
-    hover:shadow-form rounded-md bg-[#07074D] py-[5px] px-8 mt-[5px] text-center text-base font-semibold text-white outline-none mb-[25px] w-[200px] ml-[250px]"
-        >
-          <h1>Patient Details</h1>
-        </div>
-        <div className="flex items-center justify-center mx-auto w-full max-w-[550px]">
-          <form action="https://formbold.com/s/FORM_ID" method="POST">
+      <div className=" p-[10px] absolute top-[190px] left-[370px] h-[400px] w-[750px] bg-[#E2E5DE] rounded-xl">
+        <div className="flex items-center justify-center mx-auto w-full max-w-[550px] p-[20px]">
+          <form method="POST">
             <div className="-mx-3 flex flex-wrap">
               <div className="w-[190px] px-[10px] sm:w-[100px]">
                 <div className="mb-5">
@@ -175,7 +170,10 @@ function FormPage() {
               </div>
             </div>
             <div>
-              <button className="hover:shadow-form rounded-md bg-[#07074D] py-[10px] px-8 text-center text-base font-semibold text-white outline-none ml-[430px]">
+              <button
+                className="hover:shadow-form rounded-md bg-[#07074D] py-[10px] px-8 text-center text-base font-semibold text-white outline-none ml-[430px]"
+                onClick={() => setInputsOpen(false)}
+              >
                 Submit
               </button>
             </div>

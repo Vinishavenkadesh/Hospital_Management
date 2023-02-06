@@ -8,7 +8,7 @@ function App() {
   return (
     <div className=" bg-[#152238] h-[100vh] w-[100vw]">
       <div className="bg-[#F5F5F5] h-[60px] w-[100vw] border border-slate-300 ">
-        {inputsOpen ? <FormPage /> : <div></div>}
+        {inputsOpen ? <FormPage setInputsOpen={setInputsOpen} /> : <div></div>}
         <button
           className="bg-[#152238] px-8 py-3 text-sm font-medium rounded mt-[9px] ml-[210px] text-[#F5F5F5] transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-[#152238]"
           onClick={() => setInputsOpen(true)}
@@ -34,19 +34,7 @@ function App() {
                   <th className="px-4 py-2 text-left font-medium">Treatment</th>
                 </tr>
               </thead>
-              <tbody className="text-[#F5F5F5]">
-                <tr className="border border-slate-300">
-                  <th className="px-4 py-2 text-left font-medium">ID</th>
-                  <th className="px-4 py-2 text-left font-medium">Patient Name</th>
-                  <th className="px-4 py-2 text-left font-medium">Age</th>
-                  <th className="px-4 py-2 text-left font-medium">Gender</th>
-                  <th className="px-4 py-2 text-left font-medium">Date</th>
-                  <th className="px-4 py-2 text-left font-medium">Temperature</th>
-                  <th className="px-4 py-2 text-left font-medium">Blood Pressure</th>
-                  <th className="px-4 py-2 text-left font-medium">Diseases</th>
-                  <th className="px-4 py-2 text-left font-medium">Treatment</th>
-                </tr>
-              </tbody>
+              <Data/>
             </table>
           </div>
         </div>
@@ -56,3 +44,4 @@ function App() {
 }
 
 export default App;
+
