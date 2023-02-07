@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
+import "./data.css";
 
 function Data() {
   const [dataFromExcel, setDataFromExcel] = useState([]);
@@ -190,7 +191,7 @@ function Data() {
     },
   ];
 
-  const [users, setusers] = useState(data.slice(0, 30));
+  const [users, setusers] = useState(data.slice(0, 100));
   const [pageNumber, setPageNumber] = useState(1);
 
   const usersPerPage = 10;
@@ -200,7 +201,9 @@ function Data() {
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((val, index) => (
       <tr className="border border-slate-300">
-        <th className="px-4 py-2 text-left font-thin">{index + 1}</th>
+        <th className="px-4 py-2 text-left font-thin">
+          {index + 1 + pagesVisited}
+        </th>
         <th className="px-4 py-2 text-left font-thin">{val.Id}</th>
         <th className="px-4 py-2 text-left font-thin">{val.PatientName}</th>
         <th className="px-4 py-2 text-left font-thin">{val.Age}</th>
@@ -230,8 +233,26 @@ function Data() {
         </th>
       </tr>
     ));
-
-  return <tbody className="text-[#F5F5F5]">{displayUsers}</tbody>;
+  const pageCount = Math.ceil(users.length / usersPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+  return (
+    <tbody className="text-[#F5F5F5]">
+      {displayUsers}
+      <ReactPaginate
+        previousLabel={"<"}
+        nextLabel={">"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName="nextBttn"
+        disabledClassName="paginationDisabled"
+        activeClassName="paginationActive"
+      />
+    </tbody>
+  );
 }
 
 export default Data;
