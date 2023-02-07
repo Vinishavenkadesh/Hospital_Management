@@ -184,17 +184,17 @@ function Data() {
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((val, index) => (
       <tr className="border border-slate-300">
-        <th className="px-4 py-2 text-left font-thin">{index+1+pagesVisited}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.Id}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.PatientName}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.Age}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.Gender}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.Date}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.Temperature}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.BP}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.Disease}</th>
-        <th className="px-4 py-2 text-left font-thin">{val.Treatment}</th>
-        <th className="px-4 py-2 text-left font-thin">
+        <th className="px-4 py-1 text-left font-thin">{index+1+pagesVisited}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.Id}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.PatientName}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.Age}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.Gender}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.Date}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.Temperature}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.BP}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.Disease}</th>
+        <th className="px-4 py-1 text-left font-thin">{val.Treatment}</th>
+        <th className="px-4 py-1 text-left font-thin">
           <div className="flex">
             <div>
               <FontAwesomeIcon
@@ -228,9 +228,9 @@ function Data() {
     onPageChange={changePage}
     containerClassName={"paginationBttns"}
     previousLinkClassName={"previousBttn"}
-    nextLinkClassName="nextBttn"
-    disabledClassName="paginationDisabled"
-    activeClassName="paginationActive"/>
+    nextLinkClassName={"nextBttn"}
+    disabledClassName={"paginationDisabled"}
+    activeClassName={"paginationActive"}/>
   
 
   </tbody>);
