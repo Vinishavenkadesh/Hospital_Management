@@ -171,9 +171,8 @@ function Data() {
       Treatment: "Normal",
     },
   ];
-  
 
-  const [users, setusers] = useState(data.slice(0,30));
+  const [users, setusers] = useState(data.slice(0, 30));
   const [pageNumber, setPageNumber] = useState(1);
 
   const usersPerPage = 10;
@@ -214,7 +213,11 @@ function Data() {
       </tr>
     ));
 
-  return <tbody className="text-[#F5F5F5]">{displayUsers}</tbody>;
+  return( 
+  <tbody className="text-[#F5F5F5]">
+    {displayUsers}
+    <ReactPaginate></ReactPaginate>
+  </tbody>);
 }
 
 export default Data;
