@@ -1,9 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ReactPaginate from "react-paginate";
+import axios from "axios";
 
 function Data() {
+  const [dataFromExcel, setDataFromExcel] = useState([]);
+
+  useEffect(() => {
+    console.log("called in useEffect");
+    // getDataFromGoogleSheets();
+  }, []);
+
+  async function getDataFromGoogleSheets() {
+    await axios
+      .get("http://localhost:3000/alldata")
+      .then((val) => {
+        setDataFromExcel(val.data);
+        console.log(val.data);
+      })
+      .catch((err) => alert("Something went wrong"));
+  }
+
   const data = [
     {
       Id: "2104201060000",
@@ -178,7 +196,7 @@ function Data() {
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
 
-  const displayUsers = users
+  const displayUsers = dataFromExcel
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((val, index) => (
       <tr className="border border-slate-300">
@@ -213,11 +231,7 @@ function Data() {
       </tr>
     ));
 
-  return( 
-  <tbody className="text-[#F5F5F5]">
-    {displayUsers}
-    
-  </tbody>);
+  return <tbody className="text-[#F5F5F5]">{displayUsers}</tbody>;
 }
 
 export default Data;

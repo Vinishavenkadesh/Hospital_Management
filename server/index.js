@@ -45,23 +45,28 @@ app.get("/alldata", async (req, res) => {
   for (let index = 0; index < rows.length; index++) {
     const row = rows[index];
     let map = {
-      no: row.no,
-      date: row.date,
-      name: row.name,
+      Id: row.Id,
+      Name: row.Name,
+      Age: row.Age,
+      Gender: row.Gender,
+      Date: row.Date,
+      Temperature: row.Temperature,
+      BloodPressure: row.BloodPressure,
+      Disease: row.Disease,
+      Treatment: row.Treatment,
     };
     allData.push(map);
-    console.log(allData);
   }
   res.send(allData);
 });
 
 app.post("/postdata", async (req, res) => {
   // date
-//   var today = new Date();
-//   var dd = String(today.getDate()).padStart(2, "0");
-//   var mm = String(today.getMonth() + 1).padStart(2, "0");
-//   var yyyy = today.getFullYear();
-//   let date = mm + "/" + dd + "/" + yyyy;
+  //   var today = new Date();
+  //   var dd = String(today.getDate()).padStart(2, "0");
+  //   var mm = String(today.getMonth() + 1).padStart(2, "0");
+  //   var yyyy = today.getFullYear();
+  //   let date = mm + "/" + dd + "/" + yyyy;
 
   //   let row = {
   //     no: `=IF(B2<>"",ROW()-1,"")`,
@@ -69,7 +74,6 @@ app.post("/postdata", async (req, res) => {
   //     name: req.body.name,
   //   };
   let row = req.body;
-  console.log("getting val from user : ", row);
 
   // use service account creds
   await doc.useServiceAccountAuth({
