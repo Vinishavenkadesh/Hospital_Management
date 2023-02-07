@@ -17,7 +17,7 @@ function App() {
           )}
         </div>
         <button
-          className="absolute bg-[#152238] px-[1.5%] py-[1%] text-sm top-[0] mt-[1.5vh] ml-[17%] font-medium rounded text-[#F5F5F5] transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-[#152238]"
+          className="absolute bg-[#152238] px-[1.5%] py-[1%] text-sm top-[0] mt-[1.5vh] ml-[16%] font-medium rounded text-[#F5F5F5] transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-[#152238]"
           onClick={() => setInputsOpen(true)}
         >
           + Add Patient
