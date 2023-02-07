@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function FormPage({ setInputsOpen }) {
-  const [submitForm, setSubmitForm] = useState(true);
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);

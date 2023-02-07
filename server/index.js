@@ -61,18 +61,6 @@ app.get("/alldata", async (req, res) => {
 });
 
 app.post("/postdata", async (req, res) => {
-  // date
-  //   var today = new Date();
-  //   var dd = String(today.getDate()).padStart(2, "0");
-  //   var mm = String(today.getMonth() + 1).padStart(2, "0");
-  //   var yyyy = today.getFullYear();
-  //   let date = mm + "/" + dd + "/" + yyyy;
-
-  //   let row = {
-  //     no: `=IF(B2<>"",ROW()-1,"")`,
-  //     date: date,
-  //     name: req.body.name,
-  //   };
   let row = req.body;
 
   // use service account creds
