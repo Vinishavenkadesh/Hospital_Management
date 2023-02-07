@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 function FormPage({ setInputsOpen }) {
   const [submitForm, setSubmitForm] = useState(true);
@@ -11,9 +12,8 @@ function FormPage({ setInputsOpen }) {
   const [bloodPressure, setBloodPressure] = useState("");
   const [disease, setDisease] = useState("");
   const [treatment, setTreatment] = useState("");
-  
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     let formvalue = {
       Id: id,
@@ -26,8 +26,11 @@ function FormPage({ setInputsOpen }) {
       Disease: disease,
       Treatment: treatment,
     };
-    console.log(formvalue);
-    setInputsOpen(false);
+    // console.log(formvalue);
+    axios.post("http://localhost:3000/postdata", formvalue).then((res) => {
+      console.log(res);
+      setInputsOpen(false);
+    });
   }
   return (
     <div>
@@ -47,8 +50,8 @@ function FormPage({ setInputsOpen }) {
                     type="text"
                     name="fName"
                     id="fName"
-                    onChange={(val)=>{
-                      setId(val.target.value)
+                    onChange={(val) => {
+                      setId(val.target.value);
                     }}
                     placeholder="ID"
                     className="w-[190px] rounded-md border border-[#e0e0e0] bg-white py-[10px] px-[10px] text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -127,17 +130,18 @@ function FormPage({ setInputsOpen }) {
                     Gender :
                   </label>
                   <select
-                    name=""
-                    id=""
+                    name="gender"
+                    id="gender"
                     onChange={(val) => {
                       setGender(val.target.value);
+                      console.log(val.target.value);
                     }}
                     className="rounded-md border border-[#e0e0e0] bg-white py-[10px] px-[30px] text-left text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   >
                     <option value="">Gender</option>
-                    <option value="">Female</option>
-                    <option value="">Male</option>
-                    <option value="">Other</option>
+                    <option value="Femlae">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Others">Others</option>
                   </select>
                 </div>
               </div>
