@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hospital-management-dentist",
+  "private_key_id": "6e3bf941b848a6eaf4f42be8b26e83b73c63bb49",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCtRwJbsPDGMNJW\nUYVPwpi+mwgOD4NCvan6zHlgLoX/ukK/j/Qck5vWjObk4o6fWFt3U+unIrvg7hw7\nfT/E058QEuh+IDc9ygp17B63HpVZ6BWKsSNcfoVKAHjtUYfBb34Iw/rZgkw34R5/\nqmwFAx/vkspN+p5brx58076tCnXsRVSwd06DyQy76r9uRaegkShodkEoFCEV427L\naBeigEBBjyP4sXyi70NrfA4+fFJ56kVX6O5JlCtwiZtnmObNmvSZuz71DckcrO+A\neBef6i4Updkg4SlWNPwFzN/RwGZyYBQoZo1etIaFYtuBZe22h0L7MIKD4w7gTDAy\ncZHkIG3PAgMBAAECggEAHi/8S7AYSlbwFgSuxnX++Vn1/ckbE5IKXnyn+qcwRhyT\ni18PZrkakbbLdP25Xi5dBP10VRJai/W/qmeIKAi8MecxZOPE6/laeC/SLBHicB7c\nPeTdZbxPCVTqvGGTVpJPcUR/W8x07dlE4HX2yqrAMhMvNoWeeBeapqGXGvtzDt29\nr/cbVv6Gg1unXCRe1DZYydiwAl7mQhUkW3sDa0VZJ89tlu//hgTzXkG8vFrMEB+r\nLqG0wf6uoMU5BKZJJtBEA1pSchusLp0869wmqrvCy+gTY8vT4pqW1N/5IRY5dNgS\nD0gjGr3I5pl0BWyxHiF51a/N1urlcQfrTTXu0o2OuQKBgQDiPi6qNHNYGLgWOo1U\nH/1YUiBD7D9tM+6B0j00QfNvUty31Sgjd/3unPccJkBGN0B2iTHfZindz64YqXEr\nyxEPq1nUvELG2DMwq2xNHmGwT4RreRF7pWkCcjp+yxT09aWMKAjYIis2JBuUhMOx\noTQ6WnSYsJT3i7bxfsTPC+bBeQKBgQDEEW0xkIGsqHDamgZxsPWjh+zEbU5zIQ2/\ndFgalZJJ576OCEIuwbT5engZI9koowmy3QAN9uxp6hcUKWcWaOsHb3/smDHcq8kS\nm9i8dhxlP4W8ibpF226oOzNyAlh4g9A0OdnWT60BlNoGViispPHQW16MepO2t4LA\nMhJxYCjfhwKBgQDGXQjjOMutATdeXgYOLWIerxsVEq1l3POQpbn9+JktETTuhZkE\nyC8/qCZNawhNyCHgDFhK7DNnBLE7dE0Cva/+0hkYGdxepa70TEjPsQSr5nxPEr6O\nb7ALcgXxp7N/N2Xn5i4i+opylOQNqv493v6A71Btk9140eocAS8j7eZr2QKBgQCk\n9dB8CgvAG3vPwBU55FvW+Y5v+VMutBmgAh/6RettuMfvMe2U7y73U13mMO4NLZcE\nYMIh/aUMu4ItWWQ9S4qql9n2UlppQjMLMAobDfh4CwjXBr2s9qDUc/KlsmmDA8vR\nlPa9RA3YLcd921GfZ6t31Nfos1zCNwWP9NDliLT60wKBgQCLeYsrVWVK/4wIN1W/\n2uBBnelhMtj33PsNcdzSBl04rXAD0vjc5lEDJaBZDiy1ltyfM9d8bSaGfb323k5L\njuJLW8+sfLUpwraH9Fqvv/ahDNQDfc0mXgToY+FKWpocZgS/3bgfOH/gtaJcAGQ4\nMjx5YZoSy5CuShWkCklgcHvr4A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dentist-hospital-mang@hospital-management-dentist.iam.gserviceaccount.com",
+  "client_id": "111889465699782935647",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dentist-hospital-mang%40hospital-management-dentist.iam.gserviceaccount.com"
+}
