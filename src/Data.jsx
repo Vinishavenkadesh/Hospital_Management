@@ -216,7 +216,7 @@ function Data() {
   return( 
   <tbody className="text-[#F5F5F5]">
     {displayUsers}
-    <ReactPaginate></ReactPaginate>
+    
   </tbody>);
 }
 
