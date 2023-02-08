@@ -1,7 +1,6 @@
 .paginationBttns {
-    bottom: 5%;
     position :absolute;
-    /* width:100%; */
+    bottom: 5%;
     height:20px;
     list-style: none;
     display:flex;

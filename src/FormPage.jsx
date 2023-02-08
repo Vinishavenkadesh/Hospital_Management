@@ -25,10 +25,13 @@ function FormPage({ setInputsOpen }) {
       Disease: disease,
       Treatment: treatment,
     };
-    // console.log(formvalue);
+    console.log("form value submitted" ,formvalue);
     axios.post("http://localhost:3000/postdata", formvalue).then((res) => {
       console.log(res);
       setInputsOpen(false);
+    }).catch((err) => {
+      setInputsOpen(false);
+      alert("Error : Something went wrong")
     });
   }
   return (
@@ -138,7 +141,7 @@ function FormPage({ setInputsOpen }) {
                     className="rounded-md border border-[#e0e0e0] bg-white py-[10px] px-[30px] text-left text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   >
                     <option value="">Gender</option>
-                    <option value="Femlae">Female</option>
+                    <option value="Female">Female</option>
                     <option value="Male">Male</option>
                     <option value="Others">Others</option>
                   </select>
@@ -230,7 +233,6 @@ function FormPage({ setInputsOpen }) {
               <input
                 className="hover:shadow-form rounded-md bg-[#07074D] py-[10px] px-8 text-center text-base font-semibold text-white outline-none ml-[430px]"
                 type="submit"
-                onClick={() => setInputsOpen(false)}
               />
             </div>
           </form>

@@ -6,10 +6,11 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [inputsOpen, setInputsOpen] = useState(false);
+  const [users, setUsers] = useState([]);
   return (
     <div className=" bg-[#152238] h-[100vh] w-[100vw]">
       <div className="relative sm:hidden lg:block">
-        <div className=" bg-[#F5F5F5] h-[10vh] w-[100vw] border border-slate-300 sm:hidden md:block">
+        <div className=" bg-[#F5F5F5] h-[10vh] w-[100vw] border border-slate-300">
           {inputsOpen ? (
             <FormPage setInputsOpen={setInputsOpen} />
           ) : (
@@ -24,10 +25,8 @@ function App() {
         </button>
       </div>
 
-      {/* BUTTON */}
       <div className="flex w-screen h-[90vh]">
-        {/* Filter */}
-        <div className="mt-[2vh] w-[15%] h-[88vh] bg-[#F5F5F5]">
+        <div className="mt-[2vh] w-[15%] h-[88vh] bg-[#F5F5F5] sm:hidden">
           <div className="flex h-[89%] mt-[1%]">
             <div>
               <div className="flex ml-[11%] mt-[15%]">
@@ -77,8 +76,8 @@ function App() {
           </div>
         </div>
         <div className="w-[85vw] sm:overflow-x-scroll">
-          <table className=" mt-[2vh] m-[10px] h-[78%] text-left">
-            <thead className="bg-[#F5F5F5] text-[#152238]">
+          <table className=" mt-[2vh] m-[10px] w-[83vw] text-left">
+            <thead className="bg-[#F5F5F5] text-[#152238] h-[78%]">
               <tr>
                 <th className="px-4 py-2 text-left font-medium">Sl.No</th>
                 <th className="px-4 py-2 text-left font-medium">ID</th>
@@ -97,60 +96,10 @@ function App() {
                 <th className="px-4 py-2 text-left font-medium"> </th>
               </tr>
             </thead>
-            <Data />
+            <Data users={users} setusers={setUsers} />
           </table>
         </div>
       </div>
-
-      {/*
-      </div>
-      <div className="flex h-[89%] mt-[1%]">
-        <div className="bg-[#F5F5F5] w-[15%] border border-slate-300 ">
-          <div className="flex ml-[7%] mt-[15%]">
-            <div>
-              <h1 className="font-bold text-lg text-[#07074D]">
-                Filter
-              </h1>
-            </div>
-            <div>
-              <FontAwesomeIcon
-                color="#07074D"
-                className="ml-[10px] mt-[37px]"
-                icon={faCaretDown}
-              />
-            </div>
-          </div>
-          <div className="ml-[10%]">
-          <div className="flex mb-1 text-base font-semibold text-[#07074D] w-[20%]">
-            <input
-              type="checkbox"
-              className="text-[#F5F5F5] bg-[#152238] cursor-pointer"
-            />
-            <label htmlFor="" className="ml-[15px]">
-              <h1>All</h1>
-            </label>
-          </div>
-          <div className="flex mb-1 text-base font-medium text-[#07074D] w-[200px]">
-            <input
-              type="checkbox"
-              className="text-[#F5F5F5] bg-[#152238] cursor-pointer"
-            />
-            <label htmlFor="" >
-              <h1>Today</h1>
-            </label>
-          </div>
-          <div className="flex mb-1 text-base font-medium text-[#07074D] w-[200px]">
-            <input
-              type="checkbox"
-              className="text-[#F5F5F5] bg-[#152238] cursor-pointer"
-            />
-            <label htmlFor="" className="ml-[15px]">
-              <h1>Month</h1>
-            </label>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
