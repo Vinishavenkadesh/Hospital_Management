@@ -1,7 +1,7 @@
 .paginationBttns {
     bottom: 5%;
     position :absolute;
-    width:100%;
+    /* width:100%; */
     height:20px;
     list-style: none;
     display:flex;
@@ -19,7 +19,7 @@
 }
 .paginationBttns a:hover{
     color: #07074D;
-    background-color: whitesmoke;
+    background-color: rgb(3, 2, 2);
 }
 .paginationActive a{
     color: #07074D;
