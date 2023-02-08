@@ -75,7 +75,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="w-[85vw] sm:overflow-x-scroll">
+        <div className="w-[85vw] overflow-x-scroll">
           <table className=" mt-[2vh] m-[10px] w-[83vw] text-left">
             <thead className="bg-[#F5F5F5] text-[#152238] h-[78%]">
               <tr>
