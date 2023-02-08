@@ -33,7 +33,7 @@ function FormPage({ setInputsOpen }) {
   }
   return (
     <div>
-      <div className=" z-50 p-[10px] absolute top-[190px] left-[370px] h-[400px] w-[750px] bg-[#E2E5DE] rounded-xl">
+      <div className=" z-50 p-[10px] absolute top-[25vh] left-[370px] h-[400px] w-[750px] bg-[#E2E5DE] rounded-xl">
         <div className="flex items-center justify-center mx-auto w-full max-w-[550px] p-[20px]">
           <form onSubmit={handleSubmit}>
             <div className="-mx-3 flex flex-wrap">
@@ -230,7 +230,7 @@ function FormPage({ setInputsOpen }) {
               <input
                 className="hover:shadow-form rounded-md bg-[#07074D] py-[10px] px-8 text-center text-base font-semibold text-white outline-none ml-[430px]"
                 type="submit"
-                // onClick={() => setInputsOpen(false)}
+                onClick={() => setInputsOpen(false)}
               />
             </div>
           </form>
