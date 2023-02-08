@@ -29,35 +29,52 @@ function App() {
         {/* Filter */}
         <div className="mt-[2vh] w-[15%] h-[88vh] bg-[#F5F5F5]">
           <div className="flex h-[89%] mt-[1%]">
-        <div>
-          <div className="flex ml-[11%] mt-[15%]">
             <div>
-              <h1 className="sm:text-base font-bold lg:text-lg text-[#07074D]">Filter</h1>
+              <div className="flex ml-[11%] mt-[15%]">
+                <div>
+                  <h1 className="sm:text-base font-bold lg:text-lg text-[#07074D]">
+                    Filter
+                  </h1>
+                </div>
+                <div>
+                  <FontAwesomeIcon
+                    color="#07074D"
+                    className="ml-[10px]"
+                    icon={faCaretDown}
+                  />
+                </div>
+              </div>
+              <div className="ml-[13%] sm:text-sm md:text-base sm:font-medium md:font-semibold">
+                <div className="flex mb-1 text-[#07074D] w-[20%] mt-[10px]">
+                  <input
+                    type="checkbox"
+                    className="text-[#F5F5F5] bg-[#152238] cursor-pointer"
+                  />
+                  <label className="ml-[15px]">
+                    <h1>All</h1>
+                  </label>
+                </div>
+                <div className="flex mb-1 text-[#07074D] w-[200px]">
+                  <input
+                    type="checkbox"
+                    className="text-[#F5F5F5] bg-[#152238] cursor-pointer"
+                  />
+                  <label className="ml-[15px]">
+                    <h1>Today</h1>
+                  </label>
+                </div>
+                <div className="flex mb-1  text-[#07074D] w-[200px]">
+                  <input
+                    type="checkbox"
+                    className="text-[#F5F5F5] bg-[#152238] cursor-pointer"
+                  />
+                  <label className="ml-[15px]">
+                    <h1>Month</h1>
+                  </label>
+                </div>
+              </div>
             </div>
-            <div>
-              <FontAwesomeIcon
-                color="#07074D"
-                className="ml-[10px]"
-                icon={faCaretDown}
-              />
-            </div>
           </div>
-          <div className="ml-[13%] sm:text-sm md:text-base sm:font-medium md:font-semibold">
-          <div className="flex mb-1 text-[#07074D] w-[20%] mt-[10px]">
-            <input type="checkbox" className="text-[#F5F5F5] bg-[#152238] cursor-pointer"/>
-            <label className="ml-[15px]"><h1>All</h1></label>
-          </div>
-          <div className="flex mb-1 text-[#07074D] w-[200px]">
-            <input type="checkbox" className="text-[#F5F5F5] bg-[#152238] cursor-pointer"/>
-            <label className="ml-[15px]"><h1>Today</h1></label>
-          </div>
-          <div className="flex mb-1  text-[#07074D] w-[200px]">
-            <input type="checkbox" className="text-[#F5F5F5] bg-[#152238] cursor-pointer"/>
-            <label className="ml-[15px]"><h1>Month</h1></label>
-          </div>
-          </div>
-        </div>
-      </div>
         </div>
         <div className="w-[85vw] sm:overflow-x-scroll">
           <table className=" mt-[2vh] m-[10px] h-[78%] text-left">
