@@ -5,8 +5,8 @@ import ReactPaginate from "react-paginate";
 import axios from "axios";
 import "./data.css";
 
-function Data() {
-  const [users, setusers] = useState([]);
+function Data({users, setusers}) {
+  
   const [pageNumber, setPageNumber] = useState(0);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function Data() {
   };
 
   return (
-    <tbody className="text-[#F5F5F5]">
+    <tbody className="text-[#F5F5F5] h-[78%]">
       {users
         .slice(pagesVisited, pagesVisited + usersPerPage)
         .map((val, index) => (
