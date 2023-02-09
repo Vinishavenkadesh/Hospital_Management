@@ -82,6 +82,56 @@ app.post("/postdata", async (req, res) => {
   }
 });
 
+app.post("/deletedata", async (req, res) => {
+  let value = req.body.value;
+  console.log(value, "is going to be deleted");
+  // use service account creds
+  await doc.useServiceAccountAuth({
+    client_email: CREDENTIALS.client_email,
+    private_key: CREDENTIALS.private_key,
+  });
+
+  await doc.loadInfo();
+
+  // Index of the sheet
+  let sheet = doc.sheetsByIndex[0];
+
+  let rows = await sheet.getRows();
+
+  for (let index = 0; index < rows.length; index++) {
+    const row = rows[index];
+    if (row["Id"] === value) {
+      try {
+        await rows[index].delete();
+        console.log(row.Id, "is deleted");
+
+        let allData = [];
+        for (let index = 0; index < rows.length; index++) {
+          const row = rows[index];
+          let map = {
+            Id: row.Id,
+            Name: row.Name,
+            Age: row.Age,
+            Gender: row.Gender,
+            Date: row.Date,
+            Temperature: row.Temperature,
+            BloodPressure: row.BloodPressure,
+            Disease: row.Disease,
+            Treatment: row.Treatment,
+          };
+          allData.push(map);
+        }
+        allData.splice(index, 1);
+        res.send(allData);
+        // break;
+      } catch (error) {
+        console.log(error);
+        res.send("error");
+      }
+    }
+  }
+});
+
 // const updateRow = async (keyValue, oldValue, newValue) => {
 
 //     // use service account creds
@@ -109,31 +159,7 @@ app.post("/postdata", async (req, res) => {
 
 // updateRow('email', 'email@gmail.com', 'ramesh@ramesh.com')
 
-// const deleteRow = async (keyValue, thisValue) => {
-
-//     // use service account creds
-//     await doc.useServiceAccountAuth({
-//         client_email: CREDENTIALS.client_email,
-//         private_key: CREDENTIALS.private_key
-//     });
-
-//     await doc.loadInfo();
-
-//     // Index of the sheet
-//     let sheet = doc.sheetsByIndex[0];
-
-//     let rows = await sheet.getRows();
-
-//     for (let index = 0; index < rows.length; index++) {
-//         const row = rows[index];
-//         if (row[keyValue] === thisValue) {
-//             await rows[index].delete();
-//             break;
-//         }
-//     };
-// };
-
-// deleteRow('email', 'ramesh@ramesh.com')
+// deleteRow('Id', 'ramesh@ramesh.com')
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);

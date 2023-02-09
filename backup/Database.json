@@ -1,0 +1,50 @@
+{
+    "phones" : [{
+        "samsung" : [
+            {
+                "name" : "Samsung Galaxy S21 Ultra",
+                "memory" : "12 GB RAM | 256 GB ROM",
+                "display" : "17.27 cm (6.8 inch) Quad HD+ Display",
+                "camera" : "108MP + 12MP + 10MP + 10MP | 40MP Front Camera",
+                "battery" : "5000 mAh Lithium-ion Battery",
+                "processor" : "Exynos 2100 Processor",
+                "img" : "https://m.media-amazon.com/images/I/61wES5z2QeL._SL1000_.jpg",
+                "amazon" : "https://www.amazon.in/Renewed-Samsung-Phantom-Storage-without/dp/B08ZLKG8F3/ref=sr_1_2?keywords=Samsung+Galaxy+S21+Ultra&qid=1675800998&s=electronics&sr=1-2",
+                "flipkart" : "https://www.flipkart.com/samsung-galaxy-s21-ultra-phantom-black-256-gb/p/itmbec2f700e2ff3?pid=MOBFZ3TMSMXZATX3&lid=LSTMOBFZ3TMSMXZATX354XEIV&marketplace=FLIPKART&q=Samsung+Galaxy+S21+Ultra&store=tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=organic&iid=91b7fc7d-eff0-43a3-b435-1a7a47605b98.MOBFZ3TMSMXZATX3.SEARCH&ppt=clp&ppn=mobile-phones-store&ssid=tavfa6mn5s0000001675801145331&qH=e0df8591b7af3b90"
+            },
+            {
+                "name" : "Samsung Galaxy S21 Plus",
+                "memory" : "8 GB RAM | 128 GB ROM",
+                "display" : "17.02 cm (6.7 inch) Full HD+ Display",
+                "camera" : "64MP + 12MP + 12MP | 10MP Front Camera",
+                "battery" : "4800 mAh Lithium-ion Battery",
+                "processor" : "Exynos 2100 Processor",
+                "img" : "https://m.media-amazon.com/images/I/91ZgUXOWF4L._SX569_.jpg",
+                "amazon" : "https://www.amazon.in/Samsung-Galaxy-Phantom-Silver-Storage/dp/B08LRFK8ZH/ref=sr_1_1?keywords=Samsung+Galaxy+S21+Plus&qid=1675801951&s=electronics&sr=1-1",
+                "flipkart" : "https://www.flipkart.com/samsung-galaxy-s21-plus-phantom-silver-128-gb/p/itme73a877a223a7?pid=MOBFZ3TMYAWQAJDP&lid=LSTMOBFZ3TMYAWQAJDP0NFLEA&marketplace=FLIPKART&q=samsung+galaxy+s21+plus&store=tyy%2F4io&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_23_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_23_na_na_na&fm=Search&iid=4fa03097-ea54-4faa-9927-449c5340f66b.MOBFZ3TMYAWQAJDP.SEARCH&ppt=sp&ppn=sp&ssid=yhwqeubhz40000001675801957975&qH=7754465c59fd04e2"
+            },
+            {
+                "name" : "Samsung galaxy s21 FE",
+                "memory" : "8 GB RAM | 128 GB ROM",
+                "display" : "16.26 cm (6.4 inch) Full HD+ Display",
+                "camera" : "12MP + 12MP + 8MP (OIS) | 32MP Front Camera",
+                "battery" : "4800 mAh Lithium-ion Battery",
+                "processor" : "Exynos 2100 Processor",
+                "img" : "https://m.media-amazon.com/images/I/817wzcDRQAL._SX679_.jpg",
+                "amazon" : "https://www.amazon.in/Renewed-Samsung-Galaxy-Olive-Storage/dp/B09YR18F86/ref=sr_1_1?keywords=SAMSUNG+Galaxy+S21+FE+5G+%28Olive%2C+128+GB%29+%288+GB+RAM%29&qid=1675802476&s=electronics&sr=1-1",
+                "flipkart" : "https://www.flipkart.com/samsung-galaxy-s21-fe-5g-olive-128-gb/p/itm76e6e65136e17?pid=MOBGCKMEMZE5UJXK&lid=LSTMOBGCKMEMZE5UJXK6LPNPI&marketplace=FLIPKART&q=samsung+galaxy+s21&store=tyy%2F4io&srno=s_1_6&otracker=search&otracker1=search&fm=search-autosuggest&iid=143675a6-a25b-47d9-84d1-d63d7e12cf44.MOBGCKMEMZE5UJXK.SEARCH&ppt=sp&ppn=sp&ssid=im1dkxv8ow0000001675802432306&qH=801c11be4285eb40"
+            },
+            {
+                "name" : "Samsung Galaxy Note 20 Ultra",
+                "memory" : "12 GB RAM | 256 GB ROM | Expandable Upto 1 TB",
+                "display" : "17.53 cm (6.9 inch) Quad HD+ Display",
+                "camera" : "108MP + 12MP + 12MP | 10MP Front Camera",
+                "battery" : "4500 mAh Lithium-ion Battery",
+                "processor" : "Exynos octa core Processor",
+                "img" : "https://m.media-amazon.com/images/I/51xBPl6WdfS._SY741_.jpg",
+                "amazon" : "https://www.amazon.in/Renewed-Samsung-Galaxy-Storage-Without/dp/B097PVYF7D/ref=sr_1_3?keywords=Samsung+Galaxy+Note+20+Ultra&qid=1675802642&s=electronics&sr=1-3",
+                "flipkart" : "https://www.flipkart.com/samsung-galaxy-note-20-ultra-5g-mystic-bronze-256-gb/p/itm33ee94e816ae4?pid=MOBFU5WY7UFG4KD9&lid=LSTMOBFU5WY7UFG4KD9Q7ZZJ2&marketplace=FLIPKART&q=Samsung+Galaxy+Note+20+Ultra&store=tyy%2F4io&srno=s_1_2&otracker=search&otracker1=search&fm=search-autosuggest&iid=b312b919-60dc-42aa-9706-7a11418baebb.MOBFU5WY7UFG4KD9.SEARCH&ppt=pp&ppn=pp&ssid=y20mbx614w0000001675802648280&qH=5290567b21c5572d"
+            }
+        ]
+    }]
+}
