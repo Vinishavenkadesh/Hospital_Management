@@ -39,7 +39,7 @@ function FormPage({ setInputsOpen }) {
   }
   return (
     <div>
-      <div className=" z-50 p-[20px] absolute top-1/2 left-1/2 translate-y-1/2 -translate-x-1/2 h-[450px] w-[750px] bg-[#E2E5DE] rounded-xl">
+      <div className=" z-50 p-[20px] absolute top-16 left-72 h-[450px] w-[750px] bg-[#E2E5DE] rounded-xl">
         <div className="flex items-center w-full  p-[20px]">
           <form onSubmit={handleSubmit}>
             <div className="flex w-[700px] justify-between">
@@ -146,7 +146,7 @@ function FormPage({ setInputsOpen }) {
                      text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md w-[200px]"
                   >
                     <option value="">Gender</option>
-                    <option value="Femlae">Female</option>
+                    <option value="Female">Female</option>
                     <option value="Male">Male</option>
                     <option value="Others">Others</option>
                   </select>
