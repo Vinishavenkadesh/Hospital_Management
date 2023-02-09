@@ -5,8 +5,7 @@ import ReactPaginate from "react-paginate";
 import axios from "axios";
 import "./data.css";
 
-function Data() {
-  const [users, setusers] = useState([]);
+function Data({ users, setusers }) {
   const [pageNumber, setPageNumber] = useState(0);
 
   useEffect(() => {
@@ -24,6 +23,23 @@ function Data() {
       .catch((err) => console.log(err));
   }
 
+  async function deletePatient(id) {
+    axios
+      .post("http://localhost:3000/deletedata", {
+        value: id,
+      })
+      .then((res) => {
+        if(res.data !== "error"){
+          setusers(res.data);
+        }
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Error : Something went wrong");
+      });
+  }
+
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
 
@@ -34,7 +50,7 @@ function Data() {
   };
 
   return (
-    <tbody className="text-[#F5F5F5]">
+    <tbody className="text-[#F5F5F5] h-[78%]">
       {users
         .slice(pagesVisited, pagesVisited + usersPerPage)
         .map((val, index) => (
@@ -58,15 +74,16 @@ function Data() {
                 <div>
                   <FontAwesomeIcon
                     color="#F5F5F5"
-                    className="mt-[5px]"
+                    className="mt-[5px] cursor-pointer"
                     icon={faEdit}
                   />
                 </div>
                 <div>
                   <FontAwesomeIcon
                     color="#F5F5F5"
-                    className="ml-[15px] mt-[5px]"
+                    className="ml-[15px] mt-[5px] cursor-pointer"
                     icon={faTrash}
+                    onClick={() => deletePatient(val.Id)}
                   />
                 </div>
               </div>
